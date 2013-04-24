@@ -44,7 +44,7 @@
                     <tr>
                         <th>Livre</th>
                         <th>Genre</th>
-                        <th>Emprunteur</th>
+                        <th>Emprunteur (tel)</th>
                         <th>Date limite</th>
                         <th></th>
                         <th style="width: 36px;"></th>
@@ -55,7 +55,7 @@
                     <tr>
                         <td><?php echo $emprunt['libelle']; ?></td>
                         <td><?php echo $emprunt['genre']; ?></td>
-                        <td><?php echo $emprunt['prenom'] . ' ' . $emprunt['nom'] ?></td>
+                        <td><?php echo $emprunt['prenom'] . ' ' . $emprunt['nom'] . ' (' . $emprunt['telephone'] . ')'; ?></td>
                         <td class="<?php echo ( isOverdue( $emprunt['duree'] ) ) ? 'text-error' : ''; ?>">
                             <?php echo $emprunt['duree']; ?>
                         </td>
